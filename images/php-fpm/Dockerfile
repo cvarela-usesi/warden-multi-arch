@@ -40,7 +40,7 @@ RUN npm install -g n \
 
 COPY docker-entrypoint /usr/local/bin/
 COPY etc/profile.d/*.sh /etc/profile.d/
-COPY etc/*.ini /etc/
+COPY etc/*.ini /usr/local/etc/php/
 COPY etc/opcache-config /usr/local/etc/php/conf.d/opcache-config
 COPY etc/php.d/*.ini /usr/local/etc/php/conf.d
 COPY etc/php.d/05-additions.ini.template /usr/local/etc/php/conf.d

@@ -5,7 +5,7 @@ USER root
 
 RUN install-php-extensions xdebug
 
-COPY xdebug3/etc/*.ini /etc/
+COPY xdebug3/etc/*.ini /usr/local/etc/php/
 COPY xdebug3/etc/xdebug-config /usr/local/etc/php/conf.d/xdebug-config
 
 RUN cat /usr/local/etc/php/conf.d/xdebug-config >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \

@@ -8,7 +8,7 @@ RUN set -eux \
     && dnf clean all \
     && rm -rf /var/cache/dnf
 
-COPY xdebug3/etc/*.ini /etc/
+COPY xdebug3/etc/*.ini /etc/php/
 COPY xdebug3/etc/php.d/*.ini /etc/php.d/
 
 USER www-data

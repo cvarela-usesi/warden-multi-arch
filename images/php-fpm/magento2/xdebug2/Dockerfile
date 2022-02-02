@@ -5,7 +5,7 @@ USER root
 
 RUN install-php-extensions xdebug
 
-COPY xdebug2/etc/*.ini /etc/
+COPY xdebug2/etc/*.ini /usr/local/etc/php/
 COPY xdebug2/etc/php.d/*.ini /usr/local/etc/php/conf.d/
 
 USER www-data
