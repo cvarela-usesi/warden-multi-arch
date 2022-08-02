@@ -48,7 +48,7 @@ COPY etc/php.d/05-additions.ini.template /usr/local/etc/php/conf.d
 RUN cat /usr/local/etc/php/conf.d/opcache-config >> /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && rm /usr/local/etc/php/conf.d/opcache-config
 
-RUN MYSQL_LOADER_PATH=/usr/local/lib/php/extensions/no-debug-non-zts-20151012/mysqli.so \
+RUN MYSQL_LOADER_PATH=/usr/local/lib/php/extensions/no-debug-non-zts-20151012/mysqli.so && \
     if [ -f ${MYSQL_LOADER_PATH} ]; then \
         echo "extension=mysqli.so" > /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini; \
     fi
